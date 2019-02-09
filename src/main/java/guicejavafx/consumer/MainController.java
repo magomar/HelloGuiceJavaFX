@@ -17,7 +17,7 @@ public class MainController implements Initializable {
     @FXML
     private Label label;
 
-    MessageGenerator messageGenerator;
+    private MessageGenerator messageGenerator;
 
     @Inject
     public MainController(MessageGenerator messageGenerator) {
@@ -30,14 +30,9 @@ public class MainController implements Initializable {
 //    }
 
     @FXML
-    private void handleButtonAction(ActionEvent event) {
+    private void handleButtonAction() {
         System.out.println("You clicked me!");
         label.setText(messageGenerator.getMessage());
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }
 
     public MessageGenerator getMessageGenerator() {
